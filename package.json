@@ -1,0 +1,34 @@
+{
+  "name": "charla-relampago-mithril",
+  "version": "1.0.0",
+  "description": "Charla relámpago sobre Mithril",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "npm run watch-js & npm run serve",
+    "watch-js": "watchify example/src/index.js -do example/dist/bundle.js -t [ babelify --presets [ es2015 stage-0 ] ]",
+    "serve": "browser-sync start --server example --files example/dist/bundle.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/LaPlataDev/charla-relampago-mithril.git"
+  },
+  "keywords": [
+    "mithril",
+    "charla"
+  ],
+  "author": "Martín Acosta <tinchoz49@gmail.com>",
+  "license": "GPL-2.0",
+  "bugs": {
+    "url": "https://github.com/LaPlataDev/charla-relampago-mithril/issues"
+  },
+  "homepage": "https://github.com/LaPlataDev/charla-relampago-mithril#readme",
+  "devDependencies": {
+    "babel-preset-es2015": "^6.1.18",
+    "babel-preset-stage-0": "^6.1.18",
+    "babelify": "^7.2.0",
+    "browser-sync": "^2.10.0",
+    "browserify": "^12.0.1",
+    "watchify": "^3.6.1"
+  }
+}
